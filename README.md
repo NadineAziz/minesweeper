@@ -113,7 +113,7 @@ Given the board when I click on a bomb then I lose
 ```
 Given the board when I don't click on any bomb then I win
 ```
-##### User Acceptance Test 3: ⚠
+##### User Acceptance Test 3: ✅ 
 ```
 Given the board when the game is still ongoing then it is state continue
 ```

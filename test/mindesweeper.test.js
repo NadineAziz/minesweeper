@@ -196,5 +196,22 @@ describe('MineSweeper', () => {
       const newBoard = new Board(board).getBoard();
       expect(new State(newBoard).gameState()).toEqual('Continue');
     });
+    it('Given the board when the game is still ongoing then it is state win', () => {
+      const board = [
+        [-1, -1, 0],
+        [0, -1, 0],
+        [-1, 0, 0],
+      ];
+      const newBoard = new Board(board).getBoard();
+      const gameEngine = new GameEngine(newBoard);
+      for (const i in newBoard) {
+        for (const j in newBoard) {
+          gameEngine.clickCell(newBoard[i][j]);
+        }
+      }
+      expect(new State(newBoard).gameState()).toEqual(
+        'Land is cleared! GOOD JOB!'
+      );
+    });
   });
 });
