@@ -33,3 +33,27 @@ Given a board when I click on a bomb then I want to get a board with 'X' shown
 ```
 Given a board when I click on an empty then I want to get a board with '_' shown
 ```
+#### User Story 2: ⚠
+```
+As a player,I want to see different board elements so that I can see them after insertion
+```
+##### User Acceptance Test 1: ⚠
+```
+Given a board when inserting an empty then I want to get an empty within the board
+```
+##### User Acceptance Test 2: ⚠
+```
+Given a board when inserting a number then I want to get a number within the board
+```
+##### User Acceptance Test 3: ⚠
+```
+Given a board when inserting a bomb then I want to get a bomb within the board
+```
+##### User Acceptance Test 4: ⚠
+```
+Given a board when inserting an empty then I want to get a an empty within the board
+```
+##### User Acceptance Test 5: ⚠
+```
+Given a board when the cell is closed then I want to check that the cell is not flagged
+```
