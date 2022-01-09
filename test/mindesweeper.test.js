@@ -44,4 +44,10 @@ describe('MineSweeper', () => {
       expect(new Board(board).prettyPrint(bomb)).toBe('_');
     });
   });
+  describe('User Story 2: As a player,I want to see different board elements so that I can see them after insertion', () => {
+    it('Given a board when inserting an empty then I want to get an empty within the board', () => {
+      const empty = new Cell(-1, 0, 0);
+      expect(empty.isEmpty()).toBe(true);
+    });
+  });
 });
