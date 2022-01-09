@@ -95,9 +95,25 @@ Given a cell in the board when I want to check its neighbors then it should retu
 ```
 ##### User Acceptance Test 2: ⚠
 ```
-Scenario 2: Given a cell in the board when I want to check if its neighbors are not bombs then it should pass
+Given a cell in the board when I want to check if its neighbors are not bombs then it should pass
 ```
 ##### User Acceptance Test 3: ⚠
 ```
 Given a cell in the board when I want to check if its inside the board then it should pass
+```
+#### User Story 6: ⚠
+```
+As a player I want to get the state of the game so that I know if I lost or won
+```
+##### User Acceptance Test 1: ⚠
+```
+Given the board when I click on a bomb then I lose
+```
+##### User Acceptance Test 2: ⚠
+```
+Given the board when I don't click on any bomb then I win
+```
+##### User Acceptance Test 3: ⚠
+```
+Given the board when the game is still ongoing then it is state continue
 ```

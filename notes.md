@@ -11,3 +11,4 @@ Pomodoro 1:
 Pomodoro 2:
 - 5 scenarios and user stories ✅
 - User story 5: neighbors ✅
+- User story 6: game state ✅
