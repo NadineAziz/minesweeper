@@ -1,6 +1,8 @@
+const { Cell } = require('./cell.js');
+
 class Board {
   constructor(board) {
-    this.board = board;
+    this.board = this.cellBoard(board);
   }
 
   draw() {
@@ -25,6 +27,19 @@ class Board {
 
   prettyPrint(cell) {
     return cell.isOpen ? cell.shape : ' ';
+  }
+
+  // Matrix with type cells
+  cellBoard(board) {
+    const boardGame = board;
+
+    for (let i = 0; i < board.length; i++) {
+      for (let j = 0; j < board[i].length; j++) {
+        boardGame[i][j] = new Cell(board[i][j], i, j);
+      }
+    }
+
+    return boardGame;
   }
 }
 module.exports = { Board };
