@@ -141,5 +141,15 @@ describe('MineSweeper', () => {
         true
       );
     });
+    it('Given a cell in the board when I want to check if its inside the board then it should pass', () => {
+      const board = [
+        [-1, -1, -1],
+        [1, 0, 0],
+        [1, 0, 0],
+      ];
+      const newBoard = new Board(board).getBoard();
+      expect(new GameEngine(newBoard).isInsideBoard(1, 0)).toBe(true);
+      expect(new GameEngine(newBoard).isInsideBoard(3, 3)).toBe(false);
+    });
   });
 });
