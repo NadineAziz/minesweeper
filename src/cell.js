@@ -19,10 +19,12 @@ class Cell {
   open = () => {
     this.isOpen = true;
   };
-  
+
   isNumber = () => Number.isInteger(this.shape);
 
   isEmpty = () => this.shape === '_';
+  
+  isBomb = () => this.shape === "X";
 }
 module.exports = {
   Cell,
