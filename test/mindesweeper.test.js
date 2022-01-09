@@ -172,15 +172,29 @@ describe('MineSweeper', () => {
     });
     it('Given the board when I dont click on any bomb then I win', () => {
       const board = [
-        [-1, -1, -1],
-        [0, 5, 0],
+        [0, 0, 0],
+        [0, 0, 0],
         [0, 0, 0],
       ];
       const newBoard = new Board(board).getBoard();
-      const testBoard = new GameEngine(newBoard).getNeighbors(1, 1);
-      expect(new GameEngine(newBoard).areAllNotNeighborsBombs(testBoard)).toBe(
-        true
+      const gameEngine = new GameEngine(newBoard);
+      for (const i in newBoard) {
+        for (const j in newBoard) {
+          gameEngine.clickCell(newBoard[i][j]);
+        }
+      }
+      expect(new State(newBoard).gameState()).toEqual(
+        'Land is cleared! GOOD JOB!'
       );
+    });
+    it('Given the board when the game is still ongoing then it is state continue', () => {
+      const board = [
+        [0, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+      ];
+      const newBoard = new Board(board).getBoard();
+      expect(new State(newBoard).gameState()).toEqual('Continue');
     });
   });
 });
