@@ -81,35 +81,35 @@ Given a board when a user inserts a bomb then it is a -1
 ```
 Given a board when user inserts a number then it is a 0
 ```
-##### User Acceptance Test 3: ⚠
+##### User Acceptance Test 3: ✅ 
 ```
 Given a board when user inserts an empty then it is a -1
 ```
-#### User Story 5: ⚠
+#### User Story 5: ✅ 
 ```
 As a game, I want to checkout the neighbors of the cell so that I can run the game engine.
 ```
-##### User Acceptance Test 1: ⚠
+##### User Acceptance Test 1: ✅ 
 ```
 Given a cell in the board when I want to check its neighbors then it should return the list of neighbors
 ```
-##### User Acceptance Test 2: ⚠
+##### User Acceptance Test 2: ✅ 
 ```
 Given a cell in the board when I want to check if its neighbors are not bombs then it should pass
 ```
-##### User Acceptance Test 3: ⚠
+##### User Acceptance Test 3: ✅ 
 ```
 Given a cell in the board when I want to check if its inside the board then it should pass
 ```
-#### User Story 6: ⚠
+#### User Story 6: ✅ 
 ```
 As a player I want to get the state of the game so that I know if I lost or won
 ```
-##### User Acceptance Test 1: ⚠
+##### User Acceptance Test 1: ✅ 
 ```
 Given the board when I click on a bomb then I lose
 ```
-##### User Acceptance Test 2: ⚠
+##### User Acceptance Test 2: ✅ 
 ```
 Given the board when I don't click on any bomb then I win
 ```

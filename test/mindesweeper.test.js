@@ -170,5 +170,17 @@ describe('MineSweeper', () => {
       expect(new State(newBoard).gameState()).toEqual('BOOM! - Game Over');
       expect(newBoard[1][0].isBomb()).toEqual(true);
     });
+    it('Given the board when I dont click on any bomb then I win', () => {
+      const board = [
+        [-1, -1, -1],
+        [0, 5, 0],
+        [0, 0, 0],
+      ];
+      const newBoard = new Board(board).getBoard();
+      const testBoard = new GameEngine(newBoard).getNeighbors(1, 1);
+      expect(new GameEngine(newBoard).areAllNotNeighborsBombs(testBoard)).toBe(
+        true
+      );
+    });
   });
 });
