@@ -81,7 +81,7 @@ describe('MineSweeper', () => {
     });
   });
   describe('User Story 4: As a game board, I want to get the shape that the user has inserted so that I can determine its shape', () => {
-    it('Given a board when a user inserts a bomb then it is a -1', () => {
+    it('Given a board when a user inserts a bomb then it is a 1', () => {
       const board = [
         [-1, -1, -1],
         [1, 0, 0],
@@ -89,6 +89,24 @@ describe('MineSweeper', () => {
       ];
       const newBoard = new Board(board).getBoard();
       expect(newBoard[1][0].isBomb()).toBe(true);
+    });
+    it('Given a board when user inserts a number then it is a 0', () => {
+      const board = [
+        [-1, -1, -1],
+        [1, 0, 0],
+        [1, 0, 0],
+      ];
+      const newBoard = new Board(board).getBoard();
+      expect(newBoard[1][0].isBomb()).toBe(true);
+    });
+    it('Given a board when user inserts an empty then it is a -1', () => {
+      const board = [
+        [-1, -1, -1],
+        [1, 0, 0],
+        [1, 0, 0],
+      ];
+      const newBoard = new Board(board).getBoard();
+      expect(newBoard[0][0].isEmpty()).toBe(true);
     });
   });
 });

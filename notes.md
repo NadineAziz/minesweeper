@@ -32,3 +32,5 @@ Pomodoro 3:
 - create test 3.1 and pass it  ✅
 - create test 3.2 and pass it  ✅
 - create test 4.1 and pass it  ✅
+- create test 4.2 and pass it  ✅
+- create test 4.3 and pass it  ✅
