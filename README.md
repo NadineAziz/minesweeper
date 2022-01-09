@@ -57,3 +57,15 @@ Given a board when inserting an empty then I want to get a an empty within the b
 ```
 Given a board when the cell is closed then I want to check that the cell is not flagged
 ```
+#### User Story 3: ⚠
+```
+As a player,I want to check the if the cell is opened or closed so that I can know if I can insert into it
+```
+##### User Acceptance Test 1: ⚠
+```
+Given a board when I try inserting to an opened then the cell doesn't change its value
+```
+##### User Acceptance Test 2: ⚠
+```
+Given a board when I try inserting to an opened then the cell doesn't change its value unless it's flagged
+```
