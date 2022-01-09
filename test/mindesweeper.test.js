@@ -33,5 +33,15 @@ describe('MineSweeper', () => {
       bomb.open();
       expect(new Board(board).prettyPrint(bomb)).toBe('X');
     });
+    it(`Given a board when I click on an empty then I want to get a board with '_' shown`, () => {
+      const board = [
+        [-1, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+      ];
+      const bomb = new Cell(1, 0, 0);
+      bomb.open();
+      expect(new Board(board).prettyPrint(bomb)).toBe('_');
+    });
   });
 });
