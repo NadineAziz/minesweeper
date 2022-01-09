@@ -13,5 +13,13 @@ describe('MineSweeper', () => {
         '+-+-+-+-+-+-+\n|   |   |   | \n+-+-+-+-+-+-+\n|   |   |   | \n+-+-+-+-+-+-+\n|   |   |   | \n+-+-+-+-+-+-+\n'
       );
     });
+    it('Given a board when a number is inserted then I want to get a board with that number shown', () => {
+      const board = [
+        [1, 0, 0],
+        [0, 0, 0],
+        [0, 0, 0],
+      ];
+      expect(new Board(board).prettyPrint(1)).toBe(0);
+    });
   });
 });
