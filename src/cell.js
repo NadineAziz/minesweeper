@@ -17,14 +17,20 @@ class Cell {
     }
   }
   open = () => {
-    this.isOpen = true;
+    if (!this.isFlag()) {
+      this.isOpen = true;
+    }
   };
 
   isNumber = () => Number.isInteger(this.shape);
 
   isEmpty = () => this.shape === '_';
-  
-  isBomb = () => this.shape === "X";
+
+  isBomb = () => this.shape === 'X';
+  flag = () => {
+    this.shape = '*';
+  };
+  isFlag = () => this.shape === '*';
 }
 module.exports = {
   Cell,
