@@ -128,5 +128,18 @@ describe('MineSweeper', () => {
         new GameEngine(newBoard).getNeighbors(1, 1).map((x) => x.shape)
       ).toEqual(['_', '_', '_', 'X', 0, 'X', 0, 0]);
     });
+
+    it('Given a cell in the board when I want to check if its neighbors are not bombs then it should pass', () => {
+      const board = [
+        [-1, -1, -1],
+        [0, 5, 0],
+        [0, 0, 0],
+      ];
+      const newBoard = new Board(board).getBoard();
+      const testBoard = new GameEngine(newBoard).getNeighbors(1, 1);
+      expect(new GameEngine(newBoard).areAllNotNeighborsBombs(testBoard)).toBe(
+        true
+      );
+    });
   });
 });
