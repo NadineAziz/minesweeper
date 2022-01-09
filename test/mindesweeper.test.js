@@ -53,5 +53,9 @@ describe('MineSweeper', () => {
       const number = new Cell(0, 0, 0);
       expect(number.isNumber()).toBe(true);
     });
+    it('Given a board when inserting a bomb then I want to get a bomb within the board', () => {
+      const bomb = new Cell(1, 0, 2);
+      expect(bomb.isBomb()).toBe(true);
+    });
   });
 });
