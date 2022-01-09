@@ -49,5 +49,9 @@ describe('MineSweeper', () => {
       const empty = new Cell(-1, 0, 0);
       expect(empty.isEmpty()).toBe(true);
     });
+    it('Given a board when inserting a number then I want to get a number within the board', () => {
+      const number = new Cell(0, 0, 0);
+      expect(number.isNumber()).toBe(true);
+    });
   });
 });
