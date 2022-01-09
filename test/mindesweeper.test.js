@@ -39,7 +39,7 @@ describe('MineSweeper', () => {
         [0, 0, 0],
         [0, 0, 0],
       ];
-      const bomb = new Cell(1, 0, 0);
+      const bomb = new Cell(-1, 0, 0);
       bomb.open();
       expect(new Board(board).prettyPrint(bomb)).toBe('_');
     });

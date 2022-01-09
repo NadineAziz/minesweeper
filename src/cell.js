@@ -12,6 +12,8 @@ class Cell {
 			return 0;
 		case 1:
 			return 'X';
+    case -1:
+        return '_';
 	}
   }
   open = () => {
