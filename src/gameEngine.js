@@ -17,6 +17,24 @@ class GameEngine {
     return neighborsArray;
   }
 
+  /*
+   * If cell is surrounded by bombs,will open it but will break the recursion
+   * If cell is not surrounded by bombs, keep opening neighbors of the cell
+   */
+  clickCell(cell) {
+    if (!cell.isOpen) {
+      cell.setNumber(this.getNeighborsBombCount(cell));
+      cell.open();
+      const neighbors = this.getNeighbors(cell.x, cell.y);
+      const areAllNotBombs = this.areAllNotNeighborsBombs(neighbors);
+      if (areAllNotBombs) {
+        for (const i in neighbors) {
+          this.clickCell(neighbors[i]);
+        }
+      }
+    }
+  }
+
   getNeighborsBombCount(cell) {
     const neighbors = this.getNeighbors(cell.x, cell.y);
     let count = 0;

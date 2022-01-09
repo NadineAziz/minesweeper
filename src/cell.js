@@ -16,6 +16,11 @@ class Cell {
         return '_';
     }
   }
+
+  setNumber = (number) => {
+    if (this.isNumber()) this.shape = number;
+  };
+  
   open = () => {
     if (!this.isFlag()) {
       this.isOpen = true;
