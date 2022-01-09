@@ -1,5 +1,7 @@
 const { Board } = require('../src/board.js');
 const { Cell } = require('../src/cell.js');
+const { GameEngine } = require('../src/gameEngine.js');
+
 describe('MineSweeper', () => {
   describe('User Story 1: As a player,I want to see different outputs displayed so that I can play', () => {
     it('Given a new board when displayed then I want to get an empty board', () => {
@@ -107,6 +109,24 @@ describe('MineSweeper', () => {
       ];
       const newBoard = new Board(board).getBoard();
       expect(newBoard[0][0].isEmpty()).toBe(true);
+    });
+  });
+
+  describe('User Story 5: As a game, I want to checkout the neighbors of the cell so that I can run the game engine.', () => {
+    const mockMath = Object.create(global.Math);
+    mockMath.random = () => 1;
+    global.Math = mockMath;
+
+    it('Given a cell in the board when I want to check its neighbors then it should return the list of neighbors', () => {
+      const board = [
+        [-1, -1, -1],
+        [1, 0, 0],
+        [1, 0, 0],
+      ];
+      const newBoard = new Board(board).getBoard();
+      expect(
+        new GameEngine(newBoard).getNeighbors(1, 1).map((x) => x.shape)
+      ).toEqual(['_', '_', '_', 'X', 0, 'X', 0, 0]);
     });
   });
 });
