@@ -5,6 +5,10 @@ class Board {
     this.board = this.cellBoard(board);
   }
 
+  getBoard() {
+    return this.board;
+  }
+
   draw() {
     const newBoard = this.board.map((x) =>
       x.map((cell) => this.prettyPrint(cell))
