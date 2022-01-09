@@ -1,4 +1,8 @@
 Pomodoro 1:
-- init program
-- init files
-- Scenarios and user stories
+- init github workflow -> tests and sonar
+- init husky
+- init complexity report
+- init linter
+- configure sonar
+- init packages
+- 5 scenarios and user stories
