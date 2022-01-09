@@ -62,5 +62,9 @@ describe('MineSweeper', () => {
       flagged.flag();
       expect(flagged.isFlag()).toBe(true);
     });
+    it('Given a board when the cell is closed then I want to check that the cell is not flagged', () => {
+      const notFlagged = new Cell(-1, 2, 2);
+      expect(notFlagged.isFlag()).toBe(false);
+    });
   });
 });
