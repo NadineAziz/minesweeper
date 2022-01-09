@@ -1,6 +1,7 @@
 const { Board } = require('../src/board.js');
 const { Cell } = require('../src/cell.js');
 const { GameEngine } = require('../src/gameEngine.js');
+const { State } = require('../src/state.js');
 
 describe('MineSweeper', () => {
   describe('User Story 1: As a player,I want to see different outputs displayed so that I can play', () => {
@@ -150,6 +151,24 @@ describe('MineSweeper', () => {
       const newBoard = new Board(board).getBoard();
       expect(new GameEngine(newBoard).isInsideBoard(1, 0)).toBe(true);
       expect(new GameEngine(newBoard).isInsideBoard(3, 3)).toBe(false);
+    });
+  });
+  describe('User Story 6: As a player I want to get the state of the game so that I know if I lost or won', () => {
+    it('Given the board when I click on a bomb then I lose', () => {
+      const board = [
+        [0, 0, 0],
+        [1, 0, 0],
+        [0, 0, 0],
+      ];
+      const newBoard = new Board(board).getBoard();
+      const gameEngine = new GameEngine(newBoard);
+      for (const i in newBoard) {
+        for (const j in newBoard) {
+          gameEngine.clickCell(newBoard[i][j]);
+        }
+      }
+      expect(new State(newBoard).gameState()).toEqual('BOOM! - Game Over');
+      expect(newBoard[1][0].isBomb()).toEqual(true);
     });
   });
 });

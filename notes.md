@@ -37,10 +37,10 @@ Pomodoro 3:
 
 Pomodoro 4:
 
-- create test 5.1 and pass it  🚧
-- create test 5.2 and pass it  ⚠
-- create test 5.3 and pass it  ⚠
-- create test 6.1 and pass it  ⚠
+- create test 5.1 and pass it  ✅
+- create test 5.2 and pass it  ✅
+- create test 5.3 and pass it  ✅
+- create test 6.1 and pass it  🚧
 - create test 6.2 and pass it  ⚠
 - create test 6.3 and pass it  ⚠
 - create test 6.4 and pass it  ⚠

@@ -30,6 +30,10 @@ class GameEngine {
   areAllNotNeighborsBombs(neighborsArray) {
     return neighborsArray.every((neighbor) => !neighbor.isBomb());
   }
+  isInsideBoard(x, y) {
+    const boardSize = this.board.length;
+    return x >= 0 && x < boardSize && y >= 0 && y < boardSize;
+  }
 }
 
 module.exports = { GameEngine };
