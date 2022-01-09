@@ -9,5 +9,5 @@ Pomodoro 1:
 - 5 scenarios and user stories ✅
 
 Pomodoro 2:
+- 5 scenarios and user stories ✅
 - 5 scenarios and user stories 🚧
-- 5 scenarios and user stories ⚠

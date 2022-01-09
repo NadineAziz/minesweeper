@@ -69,3 +69,19 @@ Given a board when I try inserting to an opened then the cell doesn't change its
 ```
 Given a board when I try inserting to an opened then the cell doesn't change its value unless it's flagged
 ```
+#### User Story 4: ⚠
+```
+As a game board, I want to get the shape that the user has inserted so that I can determine its shape
+```
+##### User Acceptance Test 1: ⚠
+```
+Given a board when a user inserts a bomb then it is a -1
+```
+##### User Acceptance Test 2: ⚠
+```
+Given a board when user inserts a number then it is a 0
+```
+##### User Acceptance Test 3: ⚠
+```
+Given a board when user inserts an empty then it is a -1
+```
