@@ -7,7 +7,12 @@ class Cell {
   }
 
   toShape(number) {
-    return number === 0 ? 0 : 'X';
+    switch (number){
+		case 0:
+			return 0;
+		case 1:
+			return 'X';
+	}
   }
   open = () => {
     this.isOpen = true;
