@@ -73,5 +73,11 @@ describe('MineSweeper', () => {
       open.open();
       expect(open.isOpen).toBe(true);
     });
+    it("Given a board when I try inserting to an opened then the cell doesn't change its value unless it's flagged", () => {
+      const open = new Cell(-1, 1, 2);
+      open.flag();
+      open.open();
+      expect(open.isOpen).toBe(false);
+    });
   });
 });
