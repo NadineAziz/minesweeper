@@ -7,8 +7,7 @@ class Cell {
   }
 
   toShape(number) {
-    const numberOrBomb = number === 0 ? 0 : 'X';
-    return number === -1 ? '_' : numberOrBomb;
+    return number === 0 ? 0 : 'X';
   }
   open = () => {
     this.isOpen = true;

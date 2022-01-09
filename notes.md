@@ -19,3 +19,6 @@ Pomodoro 2:
 - User story 6: game state ✅
 - create test 1.1 and pass it  ✅
 - create test 1.2 and pass it  ✅
+
+Pomodoro 3:
+- create test 1.3 and pass it  ✅
