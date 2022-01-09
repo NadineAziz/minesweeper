@@ -67,4 +67,11 @@ describe('MineSweeper', () => {
       expect(notFlagged.isFlag()).toBe(false);
     });
   });
+  describe('User Story 3: As a player,I want to check the if the cell is opened or closed so that I can know if I can insert into it', () => {
+    it("Given a board when I try inserting to an opened then the cell doesn't change its value", () => {
+      const open = new Cell(0, 0, 0);
+      open.open();
+      expect(open.isOpen).toBe(true);
+    });
+  });
 });
