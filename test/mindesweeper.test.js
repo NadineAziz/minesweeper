@@ -57,5 +57,10 @@ describe('MineSweeper', () => {
       const bomb = new Cell(1, 0, 2);
       expect(bomb.isBomb()).toBe(true);
     });
+    it('Given a board when inserting a flag then I want to get a flag within the board', () => {
+      const flagged = new Cell(-1, 1, 2);
+      flagged.flag();
+      expect(flagged.isFlag()).toBe(true);
+    });
   });
 });

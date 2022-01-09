@@ -51,10 +51,6 @@ Given a board when inserting a bomb then I want to get a bomb within the board
 ```
 ##### User Acceptance Test 4: ⚠
 ```
-Given a board when inserting an empty then I want to get a an empty within the board
-```
-##### User Acceptance Test 5: ⚠
-```
 Given a board when the cell is closed then I want to check that the cell is not flagged
 ```
 #### User Story 3: ⚠
