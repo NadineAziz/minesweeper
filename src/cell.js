@@ -7,13 +7,13 @@ class Cell {
   }
 
   toShape(number) {
-    return number === -1 ? '_' : number === 0 ? 0 : 'X';
+    const numberOrBomb = number === 0 ? 0 : 'X';
+    return number === -1 ? '_' : numberOrBomb;
   }
-
   setNumber = (number) => {
     if (this.isNumber()) this.shape = number;
   };
-  
+
   open = () => {
     if (!this.isFlag()) {
       this.isOpen = true;

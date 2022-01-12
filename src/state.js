@@ -4,11 +4,10 @@ class State {
   }
 
   gameState() {
-    return this.isLose()
-      ? 'BOOM! - Game Over'
-      : this.isWin()
+    const winOrContinue = this.isWin()
       ? 'Land is cleared! GOOD JOB!'
       : 'Continue';
+    return this.isLose() ? 'BOOM! - Game Over' : winOrContinue;
   }
 
   isLose() {
