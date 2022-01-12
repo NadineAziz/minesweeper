@@ -25,7 +25,7 @@ class Cell {
   isEmpty = () => this.shape === '_';
 
   isBomb = () => this.shape === 'X';
-  
+
   flag = () => {
     this.shape = '*';
   };

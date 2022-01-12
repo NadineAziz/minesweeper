@@ -1,119 +1,177 @@
 ## Minesweeper Graduation
 
-### Mine Sweeper - Game Rules:		
-#### You are presented with a board of squares. Some squares contain mines (bombs), others don't. If you step on a square containing a bomb, you lose. If you manage to clear all the squares (without clicking on any bombs) you win. 
-#### Clearing a square which doesn't have a bomb reveals the number of neighboring squares containing bombs. If you guess a square contains a bomb mark it with a flag. 
-#### A squares "neighbors" are the squares adjacent above, below, left, right, and all 4 diagonals. Squares on the sides of the board or in a corner have fewer neighbors. The board does not wrap around the edges. If you clear a square with 0 neighboring bombs, all its neighbors will automatically open; recursively. 
-#### The first square you open could be a bomb. 
+### Mine Sweeper - Game Rules:
+
+#### You are presented with a board of squares. Some squares contain mines (bombs), others don't. If you step on a square containing a bomb, you lose. If you manage to clear all the squares (without clicking on any bombs) you win.
+
+#### Clearing a square which doesn't have a bomb reveals the number of neighboring squares containing bombs. If you guess a square contains a bomb mark it with a flag.
+
+#### A squares "neighbors" are the squares adjacent above, below, left, right, and all 4 diagonals. Squares on the sides of the board or in a corner have fewer neighbors. The board does not wrap around the edges. If you clear a square with 0 neighboring bombs, all its neighbors will automatically open; recursively.
+
+#### The first square you open could be a bomb.
+
 #### You don't have to mark all the bombs to win; you just need to open all non-bomb squares.
 
 ### Marks:
+
 - ⚠ TODO
 - 🚧 IN PROGRESS
 - ✅ DONE
 
 ### User stories and acceptance tests
-#### User Story 1: ✅ 
+
+#### User Story 1: ✅
+
 ```
 As a player,I want to see different outputs displayed so that I can play
 ```
-##### User Acceptance Test 1: ✅ 
+
+##### User Acceptance Test 1: ✅
+
 ```
 Given a new board when displayed then I want to get an empty board
 ```
-##### User Acceptance Test 2: ✅ 
+
+##### User Acceptance Test 2: ✅
+
 ```
 Given a board when a number is inserted then I want to get a board with that number shown
 ```
-##### User Acceptance Test 3: ✅ 
+
+##### User Acceptance Test 3: ✅
+
 ```
 Given a board when I click on a bomb then I want to get a board with 'X' shown
 ```
-##### User Acceptance Test 4: ✅ 
+
+##### User Acceptance Test 4: ✅
+
 ```
 Given a board when I click on an empty then I want to get a board with '_' shown
 ```
-#### User Story 2: ✅ 
+
+#### User Story 2: ✅
+
 ```
 As a player,I want to see different board elements so that I can see them after insertion
 ```
-##### User Acceptance Test 1: ✅ 
+
+##### User Acceptance Test 1: ✅
+
 ```
 Given a board when inserting an empty then I want to get an empty within the board
 ```
-##### User Acceptance Test 2: ✅ 
+
+##### User Acceptance Test 2: ✅
+
 ```
 Given a board when inserting a number then I want to get a number within the board
 ```
-##### User Acceptance Test 3: ✅ 
+
+##### User Acceptance Test 3: ✅
+
 ```
 Given a board when inserting a bomb then I want to get a bomb within the board
 ```
-##### User Acceptance Test 4: ✅ 
+
+##### User Acceptance Test 4: ✅
+
 ```
 Given a board when inserting a flag then I want to get a flag within the board
 ```
-##### User Acceptance Test 5: ✅ 
+
+##### User Acceptance Test 5: ✅
+
 ```
 Given a board when the cell is closed then I want to check that the cell is not flagged
 ```
-#### User Story 3: ✅ 
+
+#### User Story 3: ✅
+
 ```
 As a player,I want to check the if the cell is opened or closed so that I can know if I can insert into it
 ```
-##### User Acceptance Test 1: ✅ 
+
+##### User Acceptance Test 1: ✅
+
 ```
 Given a board when I try inserting to an opened then the cell doesn't change its value
 ```
-##### User Acceptance Test 2: ✅ 
+
+##### User Acceptance Test 2: ✅
+
 ```
 Given a board when I try inserting to an opened then the cell doesn't change its value unless it's flagged
 ```
-#### User Story 4: ✅ 
+
+#### User Story 4: ✅
+
 ```
 As a game board, I want to get the shape that the user has inserted so that I can determine its shape
 ```
-##### User Acceptance Test 1: ✅ 
+
+##### User Acceptance Test 1: ✅
+
 ```
 Given a board when a user inserts a bomb then it is a -1
 ```
-##### User Acceptance Test 2:  ✅ 
+
+##### User Acceptance Test 2: ✅
+
 ```
 Given a board when user inserts a number then it is a 0
 ```
-##### User Acceptance Test 3: ✅ 
+
+##### User Acceptance Test 3: ✅
+
 ```
 Given a board when user inserts an empty then it is a -1
 ```
-#### User Story 5: ✅ 
+
+#### User Story 5: ✅
+
 ```
 As a game, I want to checkout the neighbors of the cell so that I can run the game engine.
 ```
-##### User Acceptance Test 1: ✅ 
+
+##### User Acceptance Test 1: ✅
+
 ```
 Given a cell in the board when I want to check its neighbors then it should return the list of neighbors
 ```
-##### User Acceptance Test 2: ✅ 
+
+##### User Acceptance Test 2: ✅
+
 ```
 Given a cell in the board when I want to check if its neighbors are not bombs then it should pass
 ```
-##### User Acceptance Test 3: ✅ 
+
+##### User Acceptance Test 3: ✅
+
 ```
 Given a cell in the board when I want to check if its inside the board then it should pass
 ```
-#### User Story 6: ✅ 
+
+#### User Story 6: ✅
+
 ```
 As a player I want to get the state of the game so that I know if I lost or won
 ```
-##### User Acceptance Test 1: ✅ 
+
+##### User Acceptance Test 1: ✅
+
 ```
 Given the board when I click on a bomb then I lose
 ```
-##### User Acceptance Test 2: ✅ 
+
+##### User Acceptance Test 2: ✅
+
 ```
 Given the board when I don't click on any bomb then I win
 ```
-##### User Acceptance Test 3: ✅ 
+
+##### User Acceptance Test 3: ✅
+
 ```
 Given the board when the game is still ongoing then it is state continue
 ```
