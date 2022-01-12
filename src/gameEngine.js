@@ -7,16 +7,19 @@ class GameEngine {
     const neighborsArray = [];
     for (let i = -1; i < 2; i++) {
       for (let j = -1; j < 2; j++) {
-        const isSameCell = i === 0 && j === 0;
-        if (!isSameCell && this.isInsideBoard(x + i, y + j)) {
-          neighborsArray.push(this.board[x + i][y + j]);
-        }
+        this.neighborsCondition(x, i, y, j, neighborsArray);
       }
     }
 
     return neighborsArray;
   }
 
+  neighborsCondition(x, i, y, j, array) {
+    const isSameCell = i === 0 && j === 0;
+    if (!isSameCell && this.isInsideBoard(x + i, y + j)) {
+      array.push(this.board[x + i][y + j]);
+    }
+  }
   /*
    * If cell is surrounded by bombs,will open it but will break the recursion
    * If cell is not surrounded by bombs, keep opening neighbors of the cell
