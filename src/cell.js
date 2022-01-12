@@ -7,14 +7,7 @@ class Cell {
   }
 
   toShape(number) {
-    switch (number) {
-      case 0:
-        return 0;
-      case 1:
-        return 'X';
-      case -1:
-        return '_';
-    }
+    return number === -1 ? '_' : number === 0 ? 0 : 'X';
   }
 
   setNumber = (number) => {
