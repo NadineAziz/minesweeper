@@ -10,10 +10,7 @@
     "create-badges": "jest-coverage-badges",
     "prepare": "husky install",
     "lint": "eslint .",
-    "lint:fix": "eslint --fix .",
-    "coverage-badges": "coverage-badges --read=custom_path_to_coverage-summary.json --save=custom_badges_folder",
-    "custom-badges": "custom-badges --read=custom_path_to_badges.json --save=custom_badges_folder",
-    "version-badge": "version-badge --save=custom_badges_folder"
+    "lint:fix": "eslint --fix ."
   },
   "repository": {
     "type": "git",
@@ -42,7 +39,6 @@
     "prettier": "^2.5.1"
   },
   "dependencies": {
-    "@adso-ts/badges": "^1.1.4",
     "eslint-config-airbnb": "^19.0.2",
     "jest-coverage-badges": "^1.1.2"
   },

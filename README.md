@@ -1,10 +1,3 @@
- ![Average](./badges/average.svg)  
- 
- ![Lines](./badges/lines.svg)
- ![Statements](./badges/statements.svg)
- ![Branches](./badges/branches.svg)
- ![Functions](./badges/functions.svg)
- ![Version](./badges/version.svg)
 ## Minesweeper Graduation
 
 ### Mine Sweeper - Game Rules:
